@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseUI
+import GoogleSignIn
+import FacebookLogin
 
 class LoginController: UIViewController {
     //Creacion de los botones de inicio de sesion, estilo, imagen, etc.
@@ -24,6 +27,10 @@ class LoginController: UIViewController {
         return buttonCP
     }()
 
+    //Variables
+    var userData = UserDefaults.standard
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,6 +43,28 @@ class LoginController: UIViewController {
     }
     
     @objc func inicioDeSesion(){
+        // 1.- Obtenemos el objeto default de authUI
+        let authUI = FUIAuth.defaultAuthUI()
+        
+        let terminos = URL(string: "https://firebase.google.com/terms/")!
+        authUI?.tosurl = terminos
+        
+        guard authUI != nil else {
+            //log error
+            print("Hubo error en el login con correo y contraseña en firebase")
+            return
+        }
+        // 2.- Delegate
+        authUI?.delegate = self
+        authUI?.providers = [FUIGoogleAuth(),FUIFacebookAuth()]
+        
+        // 3.- Obtenemos la referencia de authUI view controller
+        let authViewController = authUI!.authViewController()
+        
+        // 4.- Mostrar
+        present(authViewController, animated: true, completion: nil)
+        
+        print("Se registro correctamente en firebase")
         
     }
 
@@ -46,4 +75,22 @@ class LoginController: UIViewController {
 
 
 }
+
+extension LoginController: FUIAuthDelegate {
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        //checamos si hay error
+        if error != nil{
+            //si hubo error
+            return
+        }
+        //authDataResult?.user.uid
+        //Cuando el usuario a pasado el login
+        performSegue(withIdentifier: "principalSegue", sender: self)
+        print("Inicio sesion correctamente a la app")
+        userData.set(true, forKey: "loginHecho")
+        userData.synchronize()
+    }
+}
+
 

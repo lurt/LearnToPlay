@@ -1,0 +1,6 @@
+framework module Pods_LearnToPlay {
+  umbrella header "Pods-LearnToPlay-umbrella.h"
+
+  export *
+  module * { export * }
+}
