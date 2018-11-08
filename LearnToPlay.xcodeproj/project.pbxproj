@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BF06DB182194901F0078C919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB172194901F0078C919 /* AppDelegate.swift */; };
-		BF06DB1A2194901F0078C919 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB192194901F0078C919 /* ViewController.swift */; };
+		BF06DB1A2194901F0078C919 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB192194901F0078C919 /* LoginController.swift */; };
 		BF06DB1D2194901F0078C919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF06DB1B2194901F0078C919 /* Main.storyboard */; };
 		BF06DB202194901F0078C919 /* LearnToPlay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB1E2194901F0078C919 /* LearnToPlay.xcdatamodeld */; };
 		BF06DB22219490210078C919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF06DB21219490210078C919 /* Assets.xcassets */; };
 		BF06DB25219490210078C919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF06DB23219490210078C919 /* LaunchScreen.storyboard */; };
+		BF06DB2D21949C3D0078C919 /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB2C21949C3D0078C919 /* InicioController.swift */; };
+		BF06DB312194A9680078C919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF06DB302194A9680078C919 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF06DB142194901F0078C919 /* LearnToPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnToPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF06DB172194901F0078C919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF06DB192194901F0078C919 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF06DB192194901F0078C919 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		BF06DB1C2194901F0078C919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF06DB1F2194901F0078C919 /* LearnToPlay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LearnToPlay.xcdatamodel; sourceTree = "<group>"; };
 		BF06DB21219490210078C919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF06DB24219490210078C919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF06DB26219490210078C919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF06DB2C21949C3D0078C919 /* InicioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
+		BF06DB302194A9680078C919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		BF06DB162194901F0078C919 /* LearnToPlay */ = {
 			isa = PBXGroup;
 			children = (
+				BF06DB2F21949C7C0078C919 /* InicioControllers */,
+				BF06DB2E21949C6A0078C919 /* LoginControllers */,
 				BF06DB172194901F0078C919 /* AppDelegate.swift */,
-				BF06DB192194901F0078C919 /* ViewController.swift */,
 				BF06DB1B2194901F0078C919 /* Main.storyboard */,
 				BF06DB21219490210078C919 /* Assets.xcassets */,
 				BF06DB23219490210078C919 /* LaunchScreen.storyboard */,
 				BF06DB26219490210078C919 /* Info.plist */,
+				BF06DB302194A9680078C919 /* GoogleService-Info.plist */,
 				BF06DB1E2194901F0078C919 /* LearnToPlay.xcdatamodeld */,
 			);
 			path = LearnToPlay;
+			sourceTree = "<group>";
+		};
+		BF06DB2E21949C6A0078C919 /* LoginControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF06DB192194901F0078C919 /* LoginController.swift */,
+			);
+			path = LoginControllers;
+			sourceTree = "<group>";
+		};
+		BF06DB2F21949C7C0078C919 /* InicioControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF06DB2C21949C3D0078C919 /* InicioController.swift */,
+			);
+			path = InicioControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF06DB25219490210078C919 /* LaunchScreen.storyboard in Resources */,
+				BF06DB312194A9680078C919 /* GoogleService-Info.plist in Resources */,
 				BF06DB22219490210078C919 /* Assets.xcassets in Resources */,
 				BF06DB1D2194901F0078C919 /* Main.storyboard in Resources */,
 			);
@@ -138,7 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF06DB1A2194901F0078C919 /* ViewController.swift in Sources */,
+				BF06DB2D21949C3D0078C919 /* InicioController.swift in Sources */,
+				BF06DB1A2194901F0078C919 /* LoginController.swift in Sources */,
 				BF06DB182194901F0078C919 /* AppDelegate.swift in Sources */,
 				BF06DB202194901F0078C919 /* LearnToPlay.xcdatamodeld in Sources */,
 			);
