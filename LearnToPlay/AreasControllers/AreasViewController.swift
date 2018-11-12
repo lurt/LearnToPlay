@@ -41,5 +41,40 @@ extension AreasViewController: UICollectionViewDataSource, UICollectionViewDeleg
         return cell!
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        
+        if indexPath.row == 0 {
+            //Matematicas
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mateViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MateController") as! MateController
+            self.navigationController?.pushViewController(mateViewController, animated: true)
+            
+        } else if indexPath.row == 1 {
+            //Español
+            let main1StoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let espViewController = main1StoryBoard.instantiateViewController(withIdentifier: "EspanolController") as! EspanolController
+            self.navigationController?.pushViewController(espViewController, animated: true)
+            
+        } else if indexPath.row == 2 {
+            //Historia y Cultura
+            let main2StoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let hcViewController = main2StoryBoard.instantiateViewController(withIdentifier: "HistoriaCulturaController") as! HistoriaCulturaController
+            self.navigationController?.pushViewController(hcViewController, animated: true)
+            
+        } else if indexPath.row == 3 {
+            //Geografia
+            let main3StoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let geoViewController = main3StoryBoard.instantiateViewController(withIdentifier: "GeografiaController") as! GeografiaController
+            self.navigationController?.pushViewController(geoViewController, animated: true)
+            
+        } else if indexPath.row == 4{
+            //Ciencias Naturales
+            let main4StoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let cnViewController = main4StoryBoard.instantiateViewController(withIdentifier: "CienciasNaturalesController") as! CienciasNaturalesController
+            self.navigationController?.pushViewController(cnViewController, animated: true)
+        }
+    }
+    
     
 }
