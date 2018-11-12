@@ -29,6 +29,12 @@
 		BF06DB5021994EDE0078C919 /* GeografiaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB4F21994EDE0078C919 /* GeografiaController.swift */; };
 		BF06DB5321994F040078C919 /* CienciasNaturalesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB5221994F040078C919 /* CienciasNaturalesController.swift */; };
 		BF06DB552199584D0078C919 /* MateCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB542199584D0078C919 /* MateCollectionCell.swift */; };
+		BF06DB572199DF750078C919 /* EspanolCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB562199DF740078C919 /* EspanolCollectionCell.swift */; };
+		BF06DB592199E4C90078C919 /* CienciasNCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB582199E4C90078C919 /* CienciasNCollectionCell.swift */; };
+		BF06DB5D2199F3A60078C919 /* AnimalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB5C2199F3A60078C919 /* AnimalCollectionCell.swift */; };
+		BF06DB5F2199F3B90078C919 /* MatEnergiaCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB5E2199F3B90078C919 /* MatEnergiaCollectionCell.swift */; };
+		BF06DB612199F3D10078C919 /* AnimalesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB602199F3D10078C919 /* AnimalesController.swift */; };
+		BF06DB632199F3E30078C919 /* MatEnergiaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB622199F3E30078C919 /* MatEnergiaController.swift */; };
 		D8B1CD8B8D55A53955E7DC73 /* Pods_LearnToPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC95A0ECC0DF9D0673C1571 /* Pods_LearnToPlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +63,12 @@
 		BF06DB4F21994EDE0078C919 /* GeografiaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeografiaController.swift; sourceTree = "<group>"; };
 		BF06DB5221994F040078C919 /* CienciasNaturalesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CienciasNaturalesController.swift; sourceTree = "<group>"; };
 		BF06DB542199584D0078C919 /* MateCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateCollectionCell.swift; sourceTree = "<group>"; };
+		BF06DB562199DF740078C919 /* EspanolCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspanolCollectionCell.swift; sourceTree = "<group>"; };
+		BF06DB582199E4C90078C919 /* CienciasNCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CienciasNCollectionCell.swift; sourceTree = "<group>"; };
+		BF06DB5C2199F3A60078C919 /* AnimalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionCell.swift; sourceTree = "<group>"; };
+		BF06DB5E2199F3B90078C919 /* MatEnergiaCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatEnergiaCollectionCell.swift; sourceTree = "<group>"; };
+		BF06DB602199F3D10078C919 /* AnimalesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalesController.swift; sourceTree = "<group>"; };
+		BF06DB622199F3E30078C919 /* MatEnergiaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatEnergiaController.swift; sourceTree = "<group>"; };
 		D74A67106319DF470AE1BB6B /* Pods-LearnToPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnToPlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnToPlay/Pods-LearnToPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		D8542D6A60BE45357467C2AF /* Pods-LearnToPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnToPlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnToPlay/Pods-LearnToPlay.release.xcconfig"; sourceTree = "<group>"; };
 		EAC95A0ECC0DF9D0673C1571 /* Pods_LearnToPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnToPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				BF06DB4921994E900078C919 /* EspanolController.swift */,
+				BF06DB562199DF740078C919 /* EspanolCollectionCell.swift */,
 			);
 			path = SpanishControllers;
 			sourceTree = "<group>";
@@ -206,8 +219,29 @@
 			isa = PBXGroup;
 			children = (
 				BF06DB5221994F040078C919 /* CienciasNaturalesController.swift */,
+				BF06DB582199E4C90078C919 /* CienciasNCollectionCell.swift */,
+				BF06DB5B2199F3620078C919 /* MateriaEnergiaControllers */,
+				BF06DB5A2199F3570078C919 /* AnimalesControllers */,
 			);
 			path = CNaturalesControllers;
+			sourceTree = "<group>";
+		};
+		BF06DB5A2199F3570078C919 /* AnimalesControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF06DB602199F3D10078C919 /* AnimalesController.swift */,
+				BF06DB5C2199F3A60078C919 /* AnimalCollectionCell.swift */,
+			);
+			path = AnimalesControllers;
+			sourceTree = "<group>";
+		};
+		BF06DB5B2199F3620078C919 /* MateriaEnergiaControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF06DB622199F3E30078C919 /* MatEnergiaController.swift */,
+				BF06DB5E2199F3B90078C919 /* MatEnergiaCollectionCell.swift */,
+			);
+			path = MateriaEnergiaControllers;
 			sourceTree = "<group>";
 		};
 		C00EA3ADAAB7658F90F08FFE /* Pods */ = {
@@ -375,24 +409,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF06DB5F2199F3B90078C919 /* MatEnergiaCollectionCell.swift in Sources */,
 				BF06DB4D21994EBB0078C919 /* HistoriaCulturaController.swift in Sources */,
 				BF06DB4721994E560078C919 /* MateController.swift in Sources */,
 				BF06DB4021992BA40078C919 /* MenuController.swift in Sources */,
 				BF06DB2D21949C3D0078C919 /* InicioController.swift in Sources */,
 				BF06DB33219883E00078C919 /* CarruselController.swift in Sources */,
 				BF06DB5321994F040078C919 /* CienciasNaturalesController.swift in Sources */,
+				BF06DB5D2199F3A60078C919 /* AnimalCollectionCell.swift in Sources */,
 				BF06DB3D219918A50078C919 /* DetalleAreaController.swift in Sources */,
 				BF06DB4421992CAA0078C919 /* PoliticasController.swift in Sources */,
 				BF06DB4A21994E900078C919 /* EspanolController.swift in Sources */,
+				BF06DB592199E4C90078C919 /* CienciasNCollectionCell.swift in Sources */,
 				BF06DB39219918000078C919 /* AreasViewController.swift in Sources */,
 				BF06DB552199584D0078C919 /* MateCollectionCell.swift in Sources */,
 				BF06DB4221992C9D0078C919 /* TerminosController.swift in Sources */,
 				BF06DB362198F38D0078C919 /* CustomTabBarController.swift in Sources */,
+				BF06DB572199DF750078C919 /* EspanolCollectionCell.swift in Sources */,
 				BF06DB3B219918880078C919 /* AreasCollectionCell.swift in Sources */,
 				BF06DB1A2194901F0078C919 /* LoginController.swift in Sources */,
 				BF06DB5021994EDE0078C919 /* GeografiaController.swift in Sources */,
 				BF06DB182194901F0078C919 /* AppDelegate.swift in Sources */,
 				BF06DB202194901F0078C919 /* LearnToPlay.xcdatamodeld in Sources */,
+				BF06DB632199F3E30078C919 /* MatEnergiaController.swift in Sources */,
+				BF06DB612199F3D10078C919 /* AnimalesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

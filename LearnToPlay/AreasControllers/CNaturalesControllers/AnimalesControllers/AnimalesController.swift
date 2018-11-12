@@ -1,5 +1,5 @@
 //
-//  EspanolController.swift
+//  AnimalesController.swift
 //  LearnToPlay
 //
 //  Created by Lu Ramirez Tlaxcaltecatl on 12/11/18.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class EspanolController: UIViewController {
+class AnimalesController: UIViewController {
     
-    @IBOutlet weak var espanolCollection: UICollectionView!
+    @IBOutlet weak var animalesCollection: UICollectionView!
     
-    var name = ["Singular y Plural","Femenino y Masculino","Las Sílabas"]
-    
-    var images = ["plural","masculinofeme","silabas"]
+    var name = ["Vertebrados","Invertebrados"]
+    var images = ["vertebrados","invertebrados"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,23 +25,21 @@ class EspanolController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }
 
-extension EspanolController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension AnimalesController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return name.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = espanolCollection.dequeueReusableCell(withReuseIdentifier: "cell03", for: indexPath) as? EspanolCollectionCell
+        let cell = animalesCollection.dequeueReusableCell(withReuseIdentifier: "cell05", for: indexPath) as? AnimalCollectionCell
         
-        cell?.espanolLbl.text = name[indexPath.row]
-        cell?.espanolImg.image = UIImage(named: images[indexPath.row])
+        cell?.animalesLbl.text = name[indexPath.row]
+        cell?.animalesImg.image = UIImage(named: images[indexPath.row])
         
         return cell!
     }
-    
     
     
 }

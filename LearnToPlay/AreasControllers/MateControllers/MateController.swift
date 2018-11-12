@@ -30,5 +30,20 @@ class MateController: UIViewController {
 
 }
 
-//FALTA COLOCAR LA ECTENCION DEL DATA SOURCE Y DELEGATE PARA MOSTRAR
+extension MateController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return name.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = mateCollection.dequeueReusableCell(withReuseIdentifier: "cell02", for: indexPath) as? MateCollectionCell
+        
+        cell?.mateLbl.text = name[indexPath.row]
+        cell?.mateImg.image = UIImage(named: images[indexPath.row])
+        
+        return cell!
+    }
+    
+    
+}
 

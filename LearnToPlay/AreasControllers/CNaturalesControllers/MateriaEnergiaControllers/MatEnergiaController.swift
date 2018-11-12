@@ -1,5 +1,5 @@
 //
-//  EspanolController.swift
+//  MatEnergiaController.swift
 //  LearnToPlay
 //
 //  Created by Lu Ramirez Tlaxcaltecatl on 12/11/18.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class EspanolController: UIViewController {
+class MatEnergiaController: UIViewController {
+
+    @IBOutlet weak var matEnergiaCollection: UICollectionView!
     
-    @IBOutlet weak var espanolCollection: UICollectionView!
-    
-    var name = ["Singular y Plural","Femenino y Masculino","Las Sílabas"]
-    
-    var images = ["plural","masculinofeme","silabas"]
+    var name = ["Los Planetas","Energia"]
+    var images = ["planetas","energia"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,23 +25,22 @@ class EspanolController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+ 
 }
 
-extension EspanolController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension MatEnergiaController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return name.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = espanolCollection.dequeueReusableCell(withReuseIdentifier: "cell03", for: indexPath) as? EspanolCollectionCell
+        let cell = matEnergiaCollection.dequeueReusableCell(withReuseIdentifier: "cell06", for: indexPath) as? MatEnergiaCollectionCell
         
-        cell?.espanolLbl.text = name[indexPath.row]
-        cell?.espanolImg.image = UIImage(named: images[indexPath.row])
+        cell?.matEnergiaLbl.text = name[indexPath.row]
+        cell?.matEnergiaImg.image = UIImage(named: images[indexPath.row])
         
         return cell!
     }
-    
     
     
 }

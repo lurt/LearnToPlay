@@ -9,7 +9,13 @@
 import UIKit
 
 class CienciasNaturalesController: UIViewController {
-
+    
+    @IBOutlet weak var cienciasCollection: UICollectionView!
+    
+    var name = ["Animales","Materia y Energía","Cuerpo Humano"]
+    
+    var images = ["animals","matenergia","cuerpo"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +27,40 @@ class CienciasNaturalesController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension CienciasNaturalesController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return name.count
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = cienciasCollection.dequeueReusableCell(withReuseIdentifier: "cell04", for: indexPath) as? CienciasNCollectionCell
+        
+        cell?.cienciasLbl.text = name[indexPath.row]
+        cell?.cienciasImg.image = UIImage(named: images[indexPath.row])
+        
+        return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        
+        if indexPath.row == 0 {
+            //Animales
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let animalViewController = mainStoryBoard.instantiateViewController(withIdentifier: "AnimalesController") as! AnimalesController
+            self.navigationController?.pushViewController(animalViewController, animated: true)
+            
+        } else if indexPath.row == 1 {
+            //Materia y Energia
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let matenerViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MatEnergiaController") as! MatEnergiaController
+            self.navigationController?.pushViewController(matenerViewController, animated: true)
+            
+        }
+        
+    }
+    
+    
 }
