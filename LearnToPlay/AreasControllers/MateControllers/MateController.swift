@@ -10,6 +10,12 @@ import UIKit
 
 class MateController: UIViewController {
 
+    @IBOutlet weak var mateCollection: UICollectionView!
+    
+    var name = ["Conteo de tanto en tanto","Operaciones","Geometría"]
+    
+    var images = ["conteo","operaciones","geometria"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +28,7 @@ class MateController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+//FALTA COLOCAR LA ECTENCION DEL DATA SOURCE Y DELEGATE PARA MOSTRAR
+

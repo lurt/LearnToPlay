@@ -508,14 +508,78 @@
                     <view key="view" contentMode="scaleToFill" id="jW0-Tf-ajv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ex2-TW-CIK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OQ1-lH-C2n">
+                                    <size key="itemSize" width="375" height="273"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell02" id="G1S-g2-wgb" customClass="MateCollectionCell" customModule="LearnToPlay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="273"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="273"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pEw-3S-XgY">
+                                                    <rect key="frame" x="20" y="20" width="335" height="195"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="335" id="6hw-FO-q6z"/>
+                                                        <constraint firstAttribute="height" constant="195" id="HNh-3G-oLY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvj-zz-f7D">
+                                                    <rect key="frame" x="20" y="216" width="335" height="37"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.3411764705882353" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="pEw-3S-XgY" firstAttribute="leading" secondItem="G1S-g2-wgb" secondAttribute="leadingMargin" constant="12" id="05w-e9-TdJ"/>
+                                            <constraint firstItem="Pvj-zz-f7D" firstAttribute="leading" secondItem="G1S-g2-wgb" secondAttribute="leadingMargin" constant="12" id="1Jg-Ag-Auv"/>
+                                            <constraint firstItem="Pvj-zz-f7D" firstAttribute="top" secondItem="pEw-3S-XgY" secondAttribute="bottom" constant="1" id="ZCc-sk-ERd"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Pvj-zz-f7D" secondAttribute="trailing" constant="12" id="dL5-W9-7ed"/>
+                                            <constraint firstItem="pEw-3S-XgY" firstAttribute="top" secondItem="G1S-g2-wgb" secondAttribute="topMargin" constant="12" id="i01-fc-fBM"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Pvj-zz-f7D" secondAttribute="bottom" constant="12" id="krS-Kg-YMr"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="pEw-3S-XgY" secondAttribute="trailing" constant="12" id="y26-Ca-BRP"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="mateImg" destination="pEw-3S-XgY" id="Xr5-8e-nRj"/>
+                                            <outlet property="mateLbl" destination="Pvj-zz-f7D" id="nXd-UM-lso"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="D5U-mH-vg8" id="R94-db-v0O"/>
+                                    <outlet property="delegate" destination="D5U-mH-vg8" id="Gm0-SE-AZy"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ex2-TW-CIK" firstAttribute="trailing" secondItem="wBr-St-ILs" secondAttribute="trailing" id="3BF-AW-mx7"/>
+                            <constraint firstItem="Ex2-TW-CIK" firstAttribute="bottom" secondItem="wBr-St-ILs" secondAttribute="bottom" id="V0I-Bm-llJ"/>
+                            <constraint firstItem="Ex2-TW-CIK" firstAttribute="top" secondItem="wBr-St-ILs" secondAttribute="top" id="Vd6-Kl-3Xc"/>
+                            <constraint firstItem="Ex2-TW-CIK" firstAttribute="leading" secondItem="wBr-St-ILs" secondAttribute="leading" id="yLy-gM-Zy1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wBr-St-ILs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Matemáticas" id="O8O-uZ-p6i"/>
+                    <connections>
+                        <outlet property="mateCollection" destination="Ex2-TW-CIK" id="1qO-bS-KF0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0X-RQ-vvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1849" y="1684"/>
+            <point key="canvasLocation" x="-1850.4000000000001" y="1683.5082458770617"/>
         </scene>
         <!--Menu-->
         <scene sceneID="8hZ-Gg-xNX">
