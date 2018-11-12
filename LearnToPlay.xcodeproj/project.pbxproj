@@ -15,6 +15,14 @@
 		BF06DB25219490210078C919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF06DB23219490210078C919 /* LaunchScreen.storyboard */; };
 		BF06DB2D21949C3D0078C919 /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB2C21949C3D0078C919 /* InicioController.swift */; };
 		BF06DB312194A9680078C919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF06DB302194A9680078C919 /* GoogleService-Info.plist */; };
+		BF06DB33219883E00078C919 /* CarruselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB32219883E00078C919 /* CarruselController.swift */; };
+		BF06DB362198F38D0078C919 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB352198F38D0078C919 /* CustomTabBarController.swift */; };
+		BF06DB39219918000078C919 /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB38219918000078C919 /* AreasViewController.swift */; };
+		BF06DB3B219918880078C919 /* AreasCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB3A219918880078C919 /* AreasCollectionCell.swift */; };
+		BF06DB3D219918A50078C919 /* DetalleAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB3C219918A50078C919 /* DetalleAreaController.swift */; };
+		BF06DB4021992BA40078C919 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB3F21992BA40078C919 /* MenuController.swift */; };
+		BF06DB4221992C9D0078C919 /* TerminosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB4121992C9D0078C919 /* TerminosController.swift */; };
+		BF06DB4421992CAA0078C919 /* PoliticasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06DB4321992CAA0078C919 /* PoliticasController.swift */; };
 		D8B1CD8B8D55A53955E7DC73 /* Pods_LearnToPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC95A0ECC0DF9D0673C1571 /* Pods_LearnToPlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +37,14 @@
 		BF06DB26219490210078C919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF06DB2C21949C3D0078C919 /* InicioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
 		BF06DB302194A9680078C919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF06DB32219883E00078C919 /* CarruselController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarruselController.swift; sourceTree = "<group>"; };
+		BF06DB352198F38D0078C919 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		BF06DB38219918000078C919 /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasViewController.swift; sourceTree = "<group>"; };
+		BF06DB3A219918880078C919 /* AreasCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasCollectionCell.swift; sourceTree = "<group>"; };
+		BF06DB3C219918A50078C919 /* DetalleAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleAreaController.swift; sourceTree = "<group>"; };
+		BF06DB3F21992BA40078C919 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		BF06DB4121992C9D0078C919 /* TerminosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosController.swift; sourceTree = "<group>"; };
+		BF06DB4321992CAA0078C919 /* PoliticasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticasController.swift; sourceTree = "<group>"; };
 		D74A67106319DF470AE1BB6B /* Pods-LearnToPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnToPlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnToPlay/Pods-LearnToPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		D8542D6A60BE45357467C2AF /* Pods-LearnToPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnToPlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnToPlay/Pods-LearnToPlay.release.xcconfig"; sourceTree = "<group>"; };
 		EAC95A0ECC0DF9D0673C1571 /* Pods_LearnToPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnToPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +91,9 @@
 		BF06DB162194901F0078C919 /* LearnToPlay */ = {
 			isa = PBXGroup;
 			children = (
+				BF06DB3E21991D240078C919 /* MenuControllers */,
+				BF06DB37219917580078C919 /* AreasControllers */,
+				BF06DB342198F3320078C919 /* TabBarControllers */,
 				BF06DB2F21949C7C0078C919 /* InicioControllers */,
 				BF06DB2E21949C6A0078C919 /* LoginControllers */,
 				BF06DB172194901F0078C919 /* AppDelegate.swift */,
@@ -100,8 +119,37 @@
 			isa = PBXGroup;
 			children = (
 				BF06DB2C21949C3D0078C919 /* InicioController.swift */,
+				BF06DB32219883E00078C919 /* CarruselController.swift */,
 			);
 			path = InicioControllers;
+			sourceTree = "<group>";
+		};
+		BF06DB342198F3320078C919 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF06DB352198F38D0078C919 /* CustomTabBarController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		BF06DB37219917580078C919 /* AreasControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF06DB38219918000078C919 /* AreasViewController.swift */,
+				BF06DB3A219918880078C919 /* AreasCollectionCell.swift */,
+				BF06DB3C219918A50078C919 /* DetalleAreaController.swift */,
+			);
+			path = AreasControllers;
+			sourceTree = "<group>";
+		};
+		BF06DB3E21991D240078C919 /* MenuControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF06DB3F21992BA40078C919 /* MenuController.swift */,
+				BF06DB4121992C9D0078C919 /* TerminosController.swift */,
+				BF06DB4321992CAA0078C919 /* PoliticasController.swift */,
+			);
+			path = MenuControllers;
 			sourceTree = "<group>";
 		};
 		C00EA3ADAAB7658F90F08FFE /* Pods */ = {
@@ -269,7 +317,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF06DB4021992BA40078C919 /* MenuController.swift in Sources */,
 				BF06DB2D21949C3D0078C919 /* InicioController.swift in Sources */,
+				BF06DB33219883E00078C919 /* CarruselController.swift in Sources */,
+				BF06DB3D219918A50078C919 /* DetalleAreaController.swift in Sources */,
+				BF06DB4421992CAA0078C919 /* PoliticasController.swift in Sources */,
+				BF06DB39219918000078C919 /* AreasViewController.swift in Sources */,
+				BF06DB4221992C9D0078C919 /* TerminosController.swift in Sources */,
+				BF06DB362198F38D0078C919 /* CustomTabBarController.swift in Sources */,
+				BF06DB3B219918880078C919 /* AreasCollectionCell.swift in Sources */,
 				BF06DB1A2194901F0078C919 /* LoginController.swift in Sources */,
 				BF06DB182194901F0078C919 /* AppDelegate.swift in Sources */,
 				BF06DB202194901F0078C919 /* LearnToPlay.xcdatamodeld in Sources */,
