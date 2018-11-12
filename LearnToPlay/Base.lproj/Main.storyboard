@@ -139,6 +139,8 @@
                     <tabBarItem key="tabBarItem" title="Item" id="rSo-cT-OE8"/>
                     <connections>
                         <outlet property="imagenesView" destination="Vfm-Ms-Lgd" id="mtr-vO-oJJ"/>
+                        <outlet property="usrImg" destination="AyP-61-dAZ" id="xyz-ha-xIW"/>
+                        <outlet property="usrLabel" destination="P5R-pe-OUy" id="7yM-NJ-INb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6r8-Wn-jL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -151,6 +153,7 @@
                 <tabBarController storyboardIdentifier="CustomTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="8qn-77-QjC" customClass="CustomTabBarController" customModule="LearnToPlay" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iHT-3U-ghe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
