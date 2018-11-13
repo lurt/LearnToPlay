@@ -1,5 +1,5 @@
 //
-//  GeografiaController.swift
+//  ConteoController.swift
 //  LearnToPlay
 //
 //  Created by Lu Ramirez Tlaxcaltecatl on 12/11/18.
@@ -9,16 +9,16 @@
 import UIKit
 import WebKit
 
-class GeografiaController: UIViewController, WKNavigationDelegate {
+class ConteoController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
-    @IBOutlet weak var geografiaWeb: WKWebView!
+    @IBOutlet weak var webConteo: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        geografiaWeb.navigationDelegate = self
-        geografiaWeb.load(URLRequest(url: URL(string: "https://juegosinfantiles.bosquedefantasias.com/ciencias-sociales/geografia/mapamundi-continentes")!))
+        
+        webConteo.navigationDelegate = self
+        webConteo.load(URLRequest(url: URL(string: "https://juegosinfantiles.bosquedefantasias.com/juegos/matematicas/cuenta-caramelos/index.html")!))
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
@@ -29,5 +29,5 @@ class GeografiaController: UIViewController, WKNavigationDelegate {
         activity.stopAnimating()
         activity.hidesWhenStopped = true
     }
-
+    
 }

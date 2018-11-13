@@ -1,5 +1,5 @@
 //
-//  GeografiaController.swift
+//  OperacionesController.swift
 //  LearnToPlay
 //
 //  Created by Lu Ramirez Tlaxcaltecatl on 12/11/18.
@@ -9,17 +9,20 @@
 import UIKit
 import WebKit
 
-class GeografiaController: UIViewController, WKNavigationDelegate {
+class OperacionesController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
-    @IBOutlet weak var geografiaWeb: WKWebView!
+    @IBOutlet weak var operacionesWeb: WKWebView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        geografiaWeb.navigationDelegate = self
-        geografiaWeb.load(URLRequest(url: URL(string: "https://juegosinfantiles.bosquedefantasias.com/ciencias-sociales/geografia/mapamundi-continentes")!))
+       operacionesWeb.navigationDelegate = self
+       operacionesWeb.load(URLRequest(url: URL(string: "https://juegosinfantiles.bosquedefantasias.com/juegos/matematicas/sumas-hasta-10/index.html")!))
+        
     }
+    
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         activity.stopAnimating()

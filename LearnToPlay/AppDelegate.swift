@@ -15,13 +15,27 @@ import FirebaseUI
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var userData = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         //Conexion a Firebase
         FirebaseApp.configure()
+        
+        //validando el login
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyBoard2 = UIStoryboard(name: "Main", bundle: nil)
+        var loginVC =
+            storyBoard2.instantiateViewController(withIdentifier: "LoginController")
+        //firstVC
+        
+        if userData.bool(forKey: "loginHecho") {
+            loginVC = storyBoard2.instantiateViewController(withIdentifier: "CustomTabBarController")
+        }
+        window?.rootViewController = loginVC
+        window?.makeKeyAndVisible()
         
         
         return true

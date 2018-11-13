@@ -42,5 +42,23 @@ extension MatEnergiaController: UICollectionViewDataSource, UICollectionViewDele
         return cell!
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        
+        if indexPath.row == 0 {
+            //Planetas
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let matenerViewController = mainStoryBoard.instantiateViewController(withIdentifier: "PlanetasController") as! PlanetasController
+            self.navigationController?.pushViewController(matenerViewController, animated: true)
+            
+        } else if indexPath.row == 1 {
+            //Energia
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let energiaViewController = mainStoryBoard.instantiateViewController(withIdentifier: "EnergiaController") as! EnergiaController
+           self.navigationController?.pushViewController(energiaViewController, animated: true)
+            
+        }
+    }
+    
     
 }

@@ -1,5 +1,5 @@
 //
-//  GeografiaController.swift
+//  SinonimosAntController.swift
 //  LearnToPlay
 //
 //  Created by Lu Ramirez Tlaxcaltecatl on 12/11/18.
@@ -9,16 +9,16 @@
 import UIKit
 import WebKit
 
-class GeografiaController: UIViewController, WKNavigationDelegate {
-    
+class SinonimosAntController: UIViewController, WKNavigationDelegate {
+
     @IBOutlet weak var activity: UIActivityIndicatorView!
-    @IBOutlet weak var geografiaWeb: WKWebView!
+    @IBOutlet weak var sinonimosWeb: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        geografiaWeb.navigationDelegate = self
-        geografiaWeb.load(URLRequest(url: URL(string: "https://juegosinfantiles.bosquedefantasias.com/ciencias-sociales/geografia/mapamundi-continentes")!))
+        sinonimosWeb.navigationDelegate = self
+        sinonimosWeb.load(URLRequest(url: URL(string: "https://juegosinfantiles.bosquedefantasias.com/juego/sinonimos/sinonimos-juego-1")!))
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {

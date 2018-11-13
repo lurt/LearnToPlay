@@ -12,7 +12,7 @@ class AreasViewController: UIViewController {
     
     @IBOutlet weak var areasCollection: UICollectionView!
     
-    var name = ["Matemáticas","Español","Historia y Cultura","Geografía","Ciencias Naturales"]
+    var name = ["Matemáticas","Español","Sociedad","Geografía","Ciencias Naturales"]
     var images = ["mate","espanish","historia","geografia","natural"]
 
     override func viewDidLoad() {

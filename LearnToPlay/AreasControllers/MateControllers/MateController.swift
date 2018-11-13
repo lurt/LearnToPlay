@@ -12,7 +12,7 @@ class MateController: UIViewController {
 
     @IBOutlet weak var mateCollection: UICollectionView!
     
-    var name = ["Conteo de tanto en tanto","Operaciones","Geometría"]
+    var name = ["Conteo de tanto en tanto","Operaciones","Tablas de Multiplicar"]
     
     var images = ["conteo","operaciones","geometria"]
     
@@ -42,6 +42,29 @@ extension MateController: UICollectionViewDataSource, UICollectionViewDelegate {
         cell?.mateImg.image = UIImage(named: images[indexPath.row])
         
         return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        
+        if indexPath.row == 0 {
+            //Conteo
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mateViewController = mainStoryBoard.instantiateViewController(withIdentifier: "ConteoController") as! ConteoController
+            self.navigationController?.pushViewController(mateViewController, animated: true)
+            
+        } else if indexPath.row == 1 {
+            //Sumas y Restas
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mateViewController = mainStoryBoard.instantiateViewController(withIdentifier: "SumaRestaController") as! SumaRestaController
+            self.navigationController?.pushViewController(mateViewController, animated: true)
+        } else if indexPath.row == 2 {
+            //Tablas de multiplicar
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mateViewController = mainStoryBoard.instantiateViewController(withIdentifier: "GeometriaController") as! GeometriaController
+            self.navigationController?.pushViewController(mateViewController, animated: true)
+        }
+        
     }
     
     

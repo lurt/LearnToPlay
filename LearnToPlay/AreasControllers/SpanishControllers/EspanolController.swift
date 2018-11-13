@@ -12,7 +12,7 @@ class EspanolController: UIViewController {
     
     @IBOutlet weak var espanolCollection: UICollectionView!
     
-    var name = ["Singular y Plural","Femenino y Masculino","Las Sílabas"]
+    var name = ["Dictado","Profesiones","Sinónimos y Antónimos"]
     
     var images = ["plural","masculinofeme","silabas"]
     
@@ -41,6 +41,30 @@ extension EspanolController: UICollectionViewDataSource, UICollectionViewDelegat
         cell?.espanolImg.image = UIImage(named: images[indexPath.row])
         
         return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        
+        if indexPath.row == 0 {
+            //Dictado
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mateViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DictadoController") as! DictadoController
+            self.navigationController?.pushViewController(mateViewController, animated: true)
+            
+        } else if indexPath.row == 1 {
+            //Profesiones
+            let main1StoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let profViewController = main1StoryBoard.instantiateViewController(withIdentifier: "ProfesionesController") as! ProfesionesController
+            self.navigationController?.pushViewController(profViewController, animated: true)
+            
+        } else if indexPath.row == 2 {
+            //Sinonimos y antonimos
+            let main1StoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let profViewController = main1StoryBoard.instantiateViewController(withIdentifier: "SinonimosAntController") as! SinonimosAntController
+            self.navigationController?.pushViewController(profViewController, animated: true)
+            
+        }
     }
     
     

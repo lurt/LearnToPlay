@@ -1,5 +1,5 @@
 //
-//  GeografiaController.swift
+//  VertebradosController.swift
 //  LearnToPlay
 //
 //  Created by Lu Ramirez Tlaxcaltecatl on 12/11/18.
@@ -9,16 +9,18 @@
 import UIKit
 import WebKit
 
-class GeografiaController: UIViewController, WKNavigationDelegate {
+class VertebradosController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
-    @IBOutlet weak var geografiaWeb: WKWebView!
+    @IBOutlet weak var vertebradosWeb: WKWebView!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        geografiaWeb.navigationDelegate = self
-        geografiaWeb.load(URLRequest(url: URL(string: "https://juegosinfantiles.bosquedefantasias.com/ciencias-sociales/geografia/mapamundi-continentes")!))
+        vertebradosWeb.navigationDelegate = self
+        vertebradosWeb.load(URLRequest(url: URL(string: "https://juegosinfantiles.bosquedefantasias.com/ciencias-naturales/seres-vivos/animales-vertebrados")!))
+        
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {

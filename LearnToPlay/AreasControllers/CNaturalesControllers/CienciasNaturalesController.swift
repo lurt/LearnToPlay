@@ -58,7 +58,14 @@ extension CienciasNaturalesController: UICollectionViewDataSource, UICollectionV
             let matenerViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MatEnergiaController") as! MatEnergiaController
             self.navigationController?.pushViewController(matenerViewController, animated: true)
             
+        } else if indexPath.row == 2{
+            //Cuerpo Humano
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let bodyViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CuerpoHumanoController") as! CuerpoHumanoController
+            self.navigationController?.pushViewController(bodyViewController, animated: true)
         }
+        
+        
         
     }
     
