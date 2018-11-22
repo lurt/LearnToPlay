@@ -5,7 +5,9 @@
 ## Learn To Play!
 
 ## Equipo 4
-Jeanette Karen Abriz Morales, Maria de Lourdes Ramirez Tlax, Juan Perez Salazar
+1.- Jeanette Karen Abriz Morales 
+2.- Maria de Lourdes Ramirez Tlax 
+3.- Juan Perez Salazar
 
 ## Introducción
 Para A. Bartolomé (1994) “Los sistemas Multimedia, en el sentido que hoy se da al término, son básicamente sistemas interactivos con múltiples códigos”. Según Fred Hoffstetter: “Multimedia es el uso del ordenador para presentar y combinar: texto, gráficos, audio y vídeo con enlaces que permitan al usuario navegar, interactuar, crear y comunicarse”. 
